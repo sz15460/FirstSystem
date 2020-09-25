@@ -47,7 +47,7 @@
 		</script>
 
 		<script type="text/html" id="currentTableBar">
-			<a class="layui-btn  layui-btn-xs data-count-edit" lay-event="edit">修改记录</a>
+			<a class="layui-btn  layui-btn-xs layui-btn-warm data-count-edit" lay-event="edit">修改记录</a>
 			<a class="layui-btn layui-btn-danger layui-btn-xs data-count-edit" lay-event="delete">删除记录</a>
 		</script>
 
@@ -81,7 +81,7 @@
 				{field: 'telephone', width: 120, title: '联系电话'},
 				{field: 'status', width:80, title: '合作状态'},
 				{field: 'job', width: 120, title: '招聘岗位'},
-				{title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
+				{title: '操作', minWidth: 250, toolbar: '#currentTableBar', align: "center"}
 			]],
 			limits: [10, 15, 20, 25, 50, 100],
 			limit: 15,
