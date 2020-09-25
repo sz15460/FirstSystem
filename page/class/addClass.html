@@ -172,6 +172,18 @@
                 layedit.sync(editIndex);
             }
         });
+// 3. 验证手机号码，失去焦点时触发
+        $("#telephone").blur(function () {
+            var telephone = $("#telephone").val();
+            var reg = /^1[3456789]\d{9}$/;//正则表达式
+            if (telephone.length == 0 || telephone == null || telephone == '') {
+                layer.msg('手机号码不能为空', {icon: 5});
+            } else {
+                if (!reg.test(telephone)) {
+                    layer.msg('手机号码格式不对', {icon: 5});
+                }
+            }
+        });
 
         //监听指定开关
         form.on('switch(switchTest)', function (data) {
